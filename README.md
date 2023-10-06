@@ -20,5 +20,7 @@ Calculating heterozygosity on computecanada with bam files
 #SBATCH --mail-type=REQUEUE
 #SBATCH --mail-type=ALL
 
+module load angsd/0.939
+
 for i in *.bam;do angsd -i ${i} -anc /scratch/premacht/new_project_Apr_2023/new_data_Jun23/reference_genome/XENTR_10.0_genome_scafconcat_goodnamez.fasta -dosaf 1 -GL 1  -out ${i}out ; done
 ```
